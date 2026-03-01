@@ -1,0 +1,47 @@
+:root{--bg:#0b1220;--card:#0f1a2e;--text:#e7eefc;--muted:#a9b7d0;--accent:#7cc4ff;--accent2:#a7ffda;--border:rgba(255,255,255,.10)}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#070c16,#0b1220);color:var(--text)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:22px}
+.nav{position:sticky;top:0;backdrop-filter:blur(10px);background:rgba(7,12,22,.75);border-bottom:1px solid var(--border);z-index:10}
+.nav .row{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.brand{display:flex;flex-direction:column;line-height:1.1}
+.brand b{font-size:15px}
+.brand span{font-size:12px;color:var(--muted)}
+.menu{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:flex-end}
+.menu a{font-size:13px;color:var(--text);opacity:.9;padding:8px 10px;border:1px solid transparent;border-radius:12px}
+.menu a.active,.menu a:hover{border-color:var(--border);background:rgba(255,255,255,.04)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(90deg,var(--accent),#61a8ff);color:#061022;border:none;border-radius:14px;padding:10px 14px;font-weight:700}
+.btn.secondary{background:transparent;color:var(--text);border:1px solid var(--border)}
+.hero{padding:34px 0 16px}
+.kicker{color:var(--muted);font-size:13px}
+h1{font-size:36px;margin:10px 0 10px;letter-spacing:-.02em}
+h2{font-size:22px;margin:24px 0 10px}
+h3{font-size:16px;margin:18px 0 8px;color:var(--accent2)}
+p{color:rgba(231,238,252,.92);line-height:1.55}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+.card{grid-column:span 12;background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:18px;padding:16px}
+.card.small{padding:14px}
+@media(min-width:880px){
+  .span6{grid-column:span 6}
+  .span4{grid-column:span 4}
+  .span8{grid-column:span 8}
+}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.badge{font-size:12px;color:var(--muted);border:1px solid var(--border);padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.02)}
+.hr{height:1px;background:var(--border);margin:18px 0}
+.footer{margin-top:30px;padding:18px 0;border-top:1px solid var(--border);color:var(--muted);font-size:12px}
+.kv{display:flex;flex-wrap:wrap;gap:10px;margin:10px 0 0}
+.kv div{border:1px solid var(--border);border-radius:14px;padding:10px 12px;background:rgba(255,255,255,.02);font-size:13px;color:var(--text)}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{border:1px solid var(--border);padding:10px 12px;text-align:left;font-size:13px}
+.table th{background:rgba(255,255,255,.04)}
+.note{font-size:12px;color:var(--muted)}
+.person{display:flex;gap:12px;align-items:flex-start}
+.avatar{width:64px;height:64px;border-radius:16px;border:1px solid var(--border);background:rgba(255,255,255,.03);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto}
+.avatar img{width:100%;height:100%;object-fit:cover}
+.person b{display:block}
+.person .meta{color:var(--muted);font-size:12px;margin-top:2px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.callout{border-left:3px solid var(--accent);padding-left:12px;color:var(--muted);font-size:13px}
